@@ -2,7 +2,7 @@ import React from 'react'
 
 const FooterBanner = () => {
   return (
-    <div>FooterBanner</div>
+    <div >FooterBanner</div>
   )
 }
 

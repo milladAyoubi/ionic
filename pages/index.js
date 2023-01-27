@@ -1,7 +1,7 @@
 import React from 'react'
-
 import { client } from '../lib/client';
 import { Product, FooterBanner, HeroSection } from '../components'
+import banner from '@/sanity_ionic/schemas/banner';
 
 
 
@@ -12,24 +12,9 @@ const Home = ({ products, bannerData }) => {
         div >
 
         <
-        HeroSection heroBanner = { bannerData.length && bannerData[0] }
+        HeroSection heroBanner = { bannerData[0] }
         / >
 
-        <
-        div className = "products-heading" >
-        <
-        h2 > Unique and Elegant Styles < /h2> <
-        p > All products are custom made and designed to ensure the best possible quality
-        while maintaining our goal towards 100 % renewable efforts. < /p> < /
-        div >
-
-        product <
-        div className = "products-container" > {
-            ['Product 1', 'Product 2'].map(
-                (product) => product
-            )
-        } <
-        /div>
 
         <
         FooterBanner / >
@@ -45,7 +30,7 @@ export const getServerSideProps = async() => {
     const query = '*[_type == "product"]';
     const products = await client.fetch(query);
 
-    const bannerQuery = '*[_type == "product"]';
+    const bannerQuery = '*[_type == "banner"]';
     const bannerData = await client.fetch(bannerQuery);
 
     return {
