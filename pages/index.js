@@ -1,26 +1,55 @@
 import React from 'react'
 import { client } from '../lib/client';
-import { Product, FooterBanner, HeroSection } from '../components'
+import { Product, FooterBanner, HeroSection, Collection} from '../components'
 import banner from '@/sanity_ionic/schemas/banner';
 
 
 
 
 
-const Home = ({ products, bannerData }) => {
-    return ( <
-        div >
+const Home = ({ products, bannerData, collections }) => {
+   
+    return (
+  
+        <div>
+        
 
-        <
-        HeroSection heroBanner = { bannerData[0] }
-        / >
+        <HeroSection heroBanner = { bannerData[0] }/ >
 
 
-        <
-        FooterBanner / >
+    <div>
+        <div className="products-heading">
+                <h2>Product Categories</h2>
+                <p>Browse through our categories and avalible products on our store</p>
+            </div>
+            <div className="products-container">
+                {collections?.map((collection) => <Collection key=
+                {collection._id} collection={collection} />)}
+            </div>
 
-        <
-        /div>
+    </div>
+
+
+    <div>
+            <div className="products-heading">
+                <h2>Product Categories</h2>
+                <p>Browse through our categories and avalible products on our store</p>
+            </div>
+
+            <div className="products-container">
+                {products?.map((product) => <Product key=
+                {product._id} product={product} />)}
+            </div>
+     </div>
+           
+
+
+
+     
+
+        <FooterBanner/>
+
+        </div>
 
     )
 }
@@ -33,8 +62,12 @@ export const getServerSideProps = async() => {
     const bannerQuery = '*[_type == "banner"]';
     const bannerData = await client.fetch(bannerQuery);
 
+
+    const collectionQuery = '*[_type == "collection"]';
+    const collections = await client.fetch(collectionQuery);
+
     return {
-        props: { products, bannerData }
+        props: { products, bannerData, collections }
     }
 
 }
