@@ -14,3 +14,5 @@ export { default as Cart }
 from './Cart'
 export { default as Collection }
 from './Collection'
+export { default as Promotion }
+from './Promotion'

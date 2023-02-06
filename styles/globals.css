@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-html,
+ehtml,
 body,
 * {
     padding: 0;
@@ -114,13 +113,24 @@ span.text-red {
     font-weight: 600;
 }
 
-.products-container {
+
+/* Collection and Product Section */
+
+.collection-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
     width: 100%;
+}
+
+.products-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+    max-width: 900px;
 }
 
 .collection-card {
@@ -142,6 +152,7 @@ span.text-red {
 }
 
 .product-card {
+    margin: 2rem 0;
     text-align: center;
     cursor: pointer;
     transform: scale(1, 1);
@@ -174,6 +185,51 @@ span.text-red {
     color: black;
 }
 
+
+/* Promotion Banner */
+
+.promo-container {
+    box-shadow: rgba(52, 52, 54, 0.1) 0px 7px 20px 0px;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 400px;
+    background-image: url('./images/promo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    border-radius: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.promo-content {
+    margin: auto 0;
+}
+
+.promo-content h3 {
+    font-weight: 600;
+    line-height: 110%;
+    font-size: 2.1rem;
+    margin: 0.2rem 0;
+}
+
+.promo-content button {
+    margin: 1.2rem 0;
+    font-weight: 700;
+    border: 2px solid #202020;
+    background: none;
+    padding: 0.35rem 2.8rem;
+    transition: 0.2s ease;
+}
+
+.promo-content button:hover {
+    color: white;
+    background: #202020;
+    transition: 0.2s ease;
+}
+
+
+/*Hero Section */
+
 .hero-section-container {
     background-image: url('./images/Ionic_banner.png');
     background-position: center center;
@@ -201,7 +257,14 @@ span.text-red {
     font-size: 16px;
     font-weight: 800;
     cursor: pointer;
-    z-index: 10000 !important;
+    transition: 0.2s ease;
+}
+
+.hero-section-container button:hover {
+    background: #202020;
+    color: white;
+    transition: 0.2s ease;
+    box-shadow: rgba(52, 52, 54, 0.2) 0px 7px 10px 0px;
 }
 
 .hero-section-desc {

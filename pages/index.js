@@ -1,6 +1,6 @@
 import React from 'react'
 import { client } from '../lib/client';
-import { Product, FooterBanner, HeroSection, Collection} from '../components'
+import { Product, Promotion, FooterBanner, HeroSection, Collection} from '../components'
 import banner from '@/sanity_ionic/schemas/banner';
 
 
@@ -17,23 +17,25 @@ const Home = ({ products, bannerData, collections }) => {
         <HeroSection heroBanner = { bannerData[0] }/ >
 
 
-    <div>
-        <div className="products-heading">
-                <h2>Product Categories</h2>
-                <p>Browse through our categories and avalible products on our store</p>
+  <div className="section-container">
+        <div className="products-heading ">
+                <h2>Categories</h2>
+                <p>Browse through categories and products available on our store</p>
             </div>
-            <div className="products-container">
+            <div className="collection-container section-container">
                 {collections?.map((collection) => <Collection key=
                 {collection._id} collection={collection} />)}
             </div>
-
     </div>
+ 
+
+    <Promotion/>
 
 
-    <div>
+    <div className="section-container">
             <div className="products-heading">
-                <h2>Product Categories</h2>
-                <p>Browse through our categories and avalible products on our store</p>
+                <h2>Our Collection</h2>
+                <p>From here you can view all of out available products</p>
             </div>
 
             <div className="products-container">

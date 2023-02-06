@@ -10,7 +10,7 @@ const Collection = ({collection: {image, name}}) => {
     <div>
    
       <div className="collection-card">
-        <img src={urlFor(image && image[0])} width={130} height={130} className=""
+        <img src={urlFor(image && image[0])} width={130} height={130} 
          />
          <p>{name}</p>
       </div>

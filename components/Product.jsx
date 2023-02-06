@@ -13,6 +13,7 @@ slug, price } }) => {
         <img src={urlFor(image && image[0])} width={250} height={320} className=""
          />
         <p>{name}</p>
+        <p>${price}</p>
       </div>
       </Link>
    
