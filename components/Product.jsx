@@ -10,7 +10,7 @@ slug, price } }) => {
     <div>
       <Link href={'product/${slug.current}'}>  
       <div className="product-card">
-        <img src={urlFor(image && image[0])} width={250} height={320} className=""
+        <img src={urlFor(image && image[0])} width={300} height={400} className=""
          />
         <p>{name}</p>
         <p>${price}</p>

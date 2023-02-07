@@ -30,7 +30,7 @@ a {
 }
 
 .layout {
-    padding: 10px 0;
+    padding: 0;
 }
 
 .navbar-container {
@@ -427,23 +427,52 @@ span.text-red {
     position: relative;
 }
 
+.footer {
+    margin-top: 6rem;
+    background-color: #d1d4d963;
+    text-align: center;
+    padding: 2rem 0;
+}
+
 .footer-container {
-    color: #324d67;
     text-align: center;
     margin-top: 20px;
     padding: 30px 10px;
-    font-weight: 700;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
     justify-content: center;
+    align-items: center;
+    gap: 14rem;
 }
 
-.footer-container .icons {
-    font-size: 30px;
+.footer-col {
+    text-align: left;
+}
+
+.footer-col h4 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.footer-link {
+    margin: 0.6rem 0;
+}
+
+.icons {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    gap: 1.4rem;
+}
+
+.tiktok-icon {
+    position: relative;
+    left: 3px;
+    font-size: 1.6rem;
+}
+
+.facebook-icon {
+    font-size: 1.6rem;
 }
 
 .cart-heading {
