@@ -49,7 +49,7 @@ const Home = ({ products, bannerData, collections }) => {
 
      
 
-        <FooterBanner/>
+        
 
         </div>
 

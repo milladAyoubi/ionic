@@ -13,10 +13,12 @@
     "@next/font": "13.1.2",
     "@sanity/client": "^4.0.1",
     "@sanity/image-url": "^1.0.2",
+    "antd": "^5.1.7",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
     "next": "13.1.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1"
   }
 }

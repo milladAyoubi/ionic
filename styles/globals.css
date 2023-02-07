@@ -86,7 +86,7 @@ span.text-red {
 }
 
 .cart-icon {
-    font-size: 25px;
+    font-size: 2.6rem;
     color: gray;
     cursor: pointer;
     position: relative;
@@ -101,12 +101,13 @@ span.text-red {
 
 .cart-item-qty {
     position: absolute;
-    right: -8px;
-    font-size: 12px;
+    right: -6px;
+    top: -4px;
+    font-size: 16px;
     color: #eee;
     background-color: #f02d34;
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     text-align: center;
     font-weight: 600;
