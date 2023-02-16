@@ -17,18 +17,18 @@ const ProductDetails = ({product, products}) => {
                 </div>
 
                 <div className="product-details-text">
-                    <h1>SATIN HEADSCARF</h1>
+                    <h1>{name}</h1>
                     <div className="reviews-section">
                     <span className="reviews">
                     </span>
                     
                     </div>
-                    <p className="product-page-price">$ 99.99</p>
-                    <p>High quality premium satin headscarf. Soft touch. machine washable,<br></br> resists wrinkles, and its smooth surface helps to protect hair.</p>
+                    <p className="product-page-price">${price}</p>
+                    <p>{details}</p>
                     <br></br>
-                    <p>Width: 75 centimetres</p>
-                    
-                    <p>Length: 170 centimetres</p>
+                    <p>Case Size: 46 mm</p>
+                    <p>Case Water Resistance: 10 ATM</p>
+                    <p>Case Material: Admantium</p>
 
 
                     <div className="color-group">
@@ -39,7 +39,7 @@ const ProductDetails = ({product, products}) => {
                     </div>
                     <button className="add-to-cart-button" >Add To Cart</button>
 
-                </div>
+                 </div> 
                 
            
 
