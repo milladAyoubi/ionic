@@ -1,6 +1,6 @@
 
 
-## IONIC Eccomerce Website
+## IONIC Eccomerce Website (Under Development)
 
 
 Ionic is a complete ecommerce shopping website built using React.js, Next.js, Sanity, Stripe, HTML, and CSS. It offers a modern and intuitive online shopping experience that is highly customizable, user-friendly, and secure.
