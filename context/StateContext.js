@@ -56,7 +56,7 @@ export const StateContext = ({
         });
     }
 
-    return ( < Context.Provider value = {
+    return ( <Context.Provider value = {
             {
                 showCart,
                 cartItems,
@@ -66,8 +66,8 @@ export const StateContext = ({
                 incQty,
                 decQty,
             }
-        } > { children } <
-        /Context.Provider>
+        } > { children }
+        </Context.Provider>
 
 
     )
