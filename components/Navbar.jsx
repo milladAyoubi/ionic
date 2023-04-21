@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
 import logo from '../styles/images/promo.png';
 
+
+
 const Navbar = () => {
 
  
@@ -27,7 +29,7 @@ const Navbar = () => {
                         </li>
 
                         <li className="nav_item">
-                            <a href="#projects" className="nav_link">
+                            <a href="#collection" className="nav_link">
                             CATAGORIES
                         </a>
                         </li>
