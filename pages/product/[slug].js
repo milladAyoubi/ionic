@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState} from 'react'
 import { client, urlFor } from '../../lib/client';
 import reviews from '../../styles/images/reviews.png';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Product } from '../../components'; 
+import { useStateContext } from '../../context/StateContext'
 
 const ProductDetails = ({product, products}) => {
     console.log(product)
     const {image, name, details, price } = product;
+    const [index, setIndex] = useState(0);
+    const { decQty, incQty, qty} = useStateContext();
   return (
     <div>
         <div className="product-detail-container">
@@ -46,9 +49,9 @@ const ProductDetails = ({product, products}) => {
                     <div className="quantity">
                         <h4>Quantity</h4>
                         <p className="quantity-desc">
-                            <span className="minus" onClick=""><AiOutlineMinus/></span>
-                            <span className="num" onClick="">1</span>
-                            <span className="plus" onClick=""><AiOutlinePlus/></span>
+                            <span className="minus" onClick="">{decQty}<AiOutlineMinus/></span>
+                            <span className="num" onClick="">{qty}</span>
+                            <span className="plus" onClick=""><AiOutlinePlus/>{incQty}</span>
 
                         </p>
                     </div>
@@ -64,10 +67,11 @@ const ProductDetails = ({product, products}) => {
         <div className="maylike-products-wrapper">
             <h2>You May Also Like</h2>
             <div className="marquee">
-                <div className="maylike-products-container">
-                    {products.map((item) => {
-
-                    })}
+                <div className="maylike-products-container track">
+                    {products.map((item) => (
+                        <Product key={item._id}
+                        product={item}/>
+                    ))}
                 </div>
             </div>
         </div>

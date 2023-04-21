@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
 import logo from '../styles/images/promo.png';
+
 const Navbar = () => {
 
  
@@ -13,9 +14,10 @@ const Navbar = () => {
 
       <ul className="nav-menu grid">
                        
-                        <p className="logo">
-                        <Link href="/">Ionic</Link>
-                        </p>
+                        <div className="logo">
+                        <p className="logo-inner"></p>
+                       
+                        </div>
                         
 
                         <li className="nav_item">
@@ -43,8 +45,7 @@ const Navbar = () => {
                         </li>
                         <span className="nav-seperator"> </span>
                     </ul>
-      <button type="button" className="cart-icon" 
-      >
+      <button type="button" className="cart-icon" >
         <AiOutlineShopping />
       <span className="cart-item-qty">1</span>
       </button>
