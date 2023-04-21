@@ -28,6 +28,7 @@ export const StateContext = ({
     const onAdd = (product, quantity) => {
         const checkProductInCart = cartItems.find((item) => item._id === product._id);
 
+        //Adding Item if there are items previously existing in the cart
         if (checkProductInCart) {
             setTotalPrice((prevTotalPrive) => prevTotalPrice + product.price * quantity)
             setTotalQuantites((prevTotalQuantities) => prevTotalQuantities + quantity)
