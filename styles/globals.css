@@ -94,6 +94,31 @@ span.text-red {
     z-index: 3;
 }
 
+@media screen and (max-width: 992px) {
+    .navbar-container {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        background-color: var(--background-color);
+    }
+    .nav-menu {
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        top: 100px;
+        right: 0px;
+        width: 200px;
+        height: auto;
+        padding: 2rem 1rem;
+        border-radius: 20px;
+        transition: 0.4s;
+        box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.412);
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .logo-inner {
     width: 100px;
     height: 180%;
@@ -320,7 +345,7 @@ span.text-red {
     background: transparent;
     border: 4px solid #202020;
     color: #202020;
-    padding: 0.8rem 6rem;
+    padding: 0.8rem 2rem;
     font-size: 18px;
     font-weight: 800;
     cursor: pointer;
@@ -351,7 +376,7 @@ span.text-red {
 
 .hero-section-container h1 {
     color: white;
-    font-size: 10em;
+    font-size: 10rem;
     margin-left: -20px;
     text-transform: uppercase;
 }
@@ -669,12 +694,19 @@ span.text-red {
     transform: scale(1.1, 1.1);
 }
 
+.product-page {
+    top: 20rem;
+}
+
 .product-detail-container {
     display: flex;
+    position: relative;
+    top: 4rem;
     justify-content: center;
     gap: 5%;
-    margin: 40px;
+    margin: 100px;
     margin-top: 60px;
+    margin-bottom: 180px;
     color: #324d67;
 }
 
@@ -1010,7 +1042,7 @@ span.text-red {
         width: 100%;
     }
     .hero-section-container h3 {
-        font-size: 5rem;
+        font-size: 3rem;
     }
     .hero-section-container {
         position: relative;

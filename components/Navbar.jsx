@@ -46,12 +46,15 @@ const Navbar = () => {
                         </a>
                         </li>
                         <span className="nav-seperator"> </span>
-                    </ul>
-      <button type="button" className="cart-icon" >
+                   <div>
+                        <button type="button" className="cart-icon" >
         <AiOutlineShopping />
       <span className="cart-item-qty">1</span>
       </button>
+      </div>
 
+                    </ul>
+     
      
     </div>
   )
