@@ -94,28 +94,65 @@ span.text-red {
     z-index: 3;
 }
 
+.shopping-mobile {
+    display: none;
+}
+
+.logo-mobile {
+    display: none;
+}
+
 @media screen and (max-width: 992px) {
-    .navbar-container {
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 4;
-        background-color: var(--background-color);
+    .logo-mobile {
+        display: i;
+    }
+    .nav-seperator {
+        display: none;
+    }
+    .shoping-desktop {
+        display: none;
     }
     .nav-menu {
-        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.4rem !important;
+    }
+    .shopping-mobile {
+        display: inline;
         position: fixed;
-        top: 100px;
-        right: 0px;
-        width: 200px;
-        height: auto;
-        padding: 2rem 1rem;
-        border-radius: 20px;
-        transition: 0.4s;
-        box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.412);
+        bottom: 4rem;
+        right: 4rem;
+        background-color: white;
+        border-radius: 100%;
+        height: 80px;
+        width: 80px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .logo-mobile {
+        display: inline;
+        z-index: 4;
+        position: fixed;
+    }
+    .cart-icon {
+        position: fixed;
+        left: 1.3rem;
+        top: 1rem;
+    }
+    .navbar-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        background-color: var(--background-color);
+    }
+    .nav_item a {
+        font-size: 0.8rem;
+    }
+    .logo-desktop {
+        display: none;
     }
 }
 

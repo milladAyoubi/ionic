@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
 import logo from '../styles/images/promo.png';
@@ -6,27 +6,25 @@ import logo from '../styles/images/promo.png';
 
 
 const Navbar = () => {
+  const [navbar, setNavbar] = useState(false);
 
  
   return (
     <div className="navbar-container ">
 
-      
+                  <div className="logo logo-mobile">
+                        <p className="logo-inner"></p>
+                       
+                  </div>
       
 
       <ul className="nav-menu grid">
                        
-                        <div className="logo">
+                        <div className="logo logo-desktop">
                         <p className="logo-inner"></p>
                        
                         </div>
                         
-
-                        <li className="nav_item">
-                            <a href="#" className="nav_link">
-                            HOME
-                        </a>
-                        </li>
 
                         <li className="nav_item">
                             <a href="#collection" className="nav_link">
@@ -46,7 +44,7 @@ const Navbar = () => {
                         </a>
                         </li>
                         <span className="nav-seperator"> </span>
-                   <div>
+                   <div className='shoping-desktop'>
                         <button type="button" className="cart-icon" >
         <AiOutlineShopping />
       <span className="cart-item-qty">1</span>
@@ -55,7 +53,14 @@ const Navbar = () => {
 
                     </ul>
      
-     
+     <div className='shopping-mobile'>
+     <button type="button" className="cart-icon" >
+        <AiOutlineShopping />
+      <span className="cart-item-qty">1</span>
+      </button>
+     </div>
+
+
     </div>
   )
 }
