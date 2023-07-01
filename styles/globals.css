@@ -362,10 +362,8 @@ span.text-red {
     background-image: url('./images/Ionic_banner.png');
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
-    height: 1200px;
-    z-index: 0;
+    height: 70vh;
 }
 
 .hero-section-container .new-products {
@@ -419,8 +417,8 @@ span.text-red {
 }
 
 .hero-contents {
-    position: absolute;
-    top: 14rem;
+    position: relative;
+    top: 12rem;
 }
 
 .hero-section-image {
@@ -1069,6 +1067,9 @@ span.text-red {
 .promo-overlay {}
 
 @media screen and (max-width:1024px) {
+    .hero-section-container {
+        height: 60vh;
+    }
     .hero-banner-container {
         height: 560px;
     }
@@ -1089,7 +1090,7 @@ span.text-red {
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-        height: 1200px;
+        height: 70vh;
         z-index: 0;
     }
     .footer-container {
