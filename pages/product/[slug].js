@@ -4,12 +4,19 @@ import reviews from '../../styles/images/reviews.png';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Product } from '../../components'; 
 import { useStateContext } from '../../context/StateContext'
+import ColorSelector from '@/components/ColorSelector';
 
 import Accordion from '@/components/Accordion';
 
 const ProductDetails = ({product, products}) => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const Colors = [ 
+        { hex: '#AE815F', name: 'Caramel Twist' },
+        { hex:'#C5C5C7', name: 'Silver Ice' }, 
+        { hex: '#EB8860', name: 'Vera Orange'},
+        { hex:'#303030', name: 'Obsidian'},
+    ];
 
     const toggleAccordion = () => {
       setIsOpen(!isOpen);
@@ -79,12 +86,15 @@ const ProductDetails = ({product, products}) => {
 
 
                     <div className="color-group">
-                        <div className="color-group-item "><div className="color-caramel"></div></div>
-                        <div className="color-group-item color-selector"><div className="color-ivory "></div></div>
-                        <div className="color-group-item"><div className="color-spastic"></div></div>
-                        <div className="color-group-item "><div className="color-obsidian"></div></div>
+
+                    <div>
+                    <div>
+                      
+                     <ColorSelector colors={Colors} />
+                     </div>
                     </div>
-                    <p className="color-name">Silver</p>
+                       
+                    </div>
 
                     <div className="quantity">
                         <h4>Quantity</h4>
