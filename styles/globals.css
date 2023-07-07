@@ -737,7 +737,7 @@ span.text-red {
     display: flex;
     position: relative;
     top: 4rem;
-    justify-content: center;
+    justify-content: start;
     gap: 5%;
     margin: 100px;
     margin-top: 60px;
@@ -986,7 +986,7 @@ span.text-red {
 
 .maylike-products-wrapper h2 {
     text-align: center;
-    margin-top: 120px;
+    margin-top: 280px;
     color: #202020;
     font-size: 28px;
 }
@@ -1109,7 +1109,7 @@ span.text-red {
         border-left: none;
     }
     .maylike-products-wrapper {
-        margin-top: 12rem;
+        margin-top: 202rem;
     }
     .image-container {
         margin-top: 4rem;
@@ -1299,4 +1299,58 @@ span.text-red {
         width: 300px;
         margin: auto;
     }
+}
+
+.accordion {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 800px;
+}
+
+.accordion-header {
+    background-color: #ffffff;
+    padding: 18px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.2s;
+}
+
+.accordion-header h3:hover,
+.accordion-header.selected {
+    color: #CD2052;
+    transition: 0.2s;
+}
+
+.selected-title {
+    color: #CD2052;
+}
+
+.accordion-icon {
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #888;
+    border-right: 2px solid #888;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-icon.open {
+    transform: rotate(-135deg);
+}
+
+.accordion-content {
+    padding: 10px;
+    width: 800px;
+}
+
+.accordion-title {
+    font-weight: 700;
+    padding: 0 10px;
+    margin-bottom: 0.5rem;
+}
+
+.accordion-section {
+    margin-top: 1rem;
 }

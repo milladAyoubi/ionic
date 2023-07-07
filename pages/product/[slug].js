@@ -5,7 +5,24 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-
 import { Product } from '../../components'; 
 import { useStateContext } from '../../context/StateContext'
 
+import Accordion from '@/components/Accordion';
+
 const ProductDetails = ({product, products}) => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleAccordion = () => {
+      setIsOpen(!isOpen);
+    };
+  
+    const [openAccordionIndex, setOpenAccordionIndex] = useState(null);
+
+  const accordions = [
+    { title: 'Materials', contentTitle: 'Composition', content: 'Cotton is a soft and versatile natural fibre harvested from the cotton plant. Polyester is a synthetic fibre made from crude oil (a fossil resource).' },
+    { title: 'Care Guide', contentTitle: 'Care instructions',content: 'Only non-chlorine bleach when needed. Medium iron. Machine wash cold' },
+  
+  ];
+
     console.log(product)
     const {image, name, details, price } = product;
     const [index, setIndex] = useState(0);
@@ -21,7 +38,11 @@ const ProductDetails = ({product, products}) => {
                 </div>
 
                 <div className="product-details-text">
-                    <h1>{name}</h1>
+
+    
+    
+    
+          <h1>{name}</h1>
                     <div className="reviews-section">
                     <AiFillStar className="star-review"/>
                     <AiFillStar className="star-review"/>
@@ -36,6 +57,25 @@ const ProductDetails = ({product, products}) => {
                     <p>Case Size: 46 mm</p>
                     <p>Case Water Resistance: 10 ATM</p>
                     <p>Case Material: Admantium</p>
+
+
+                    <div className='accordion-section'>
+                   
+    
+      {accordions.map((accordion, index) => (
+        <Accordion
+          key={index}
+          title={accordion.title}
+          contentTitle={accordion.contentTitle}
+
+          content={accordion.content}
+          index={index}
+          openAccordionIndex={openAccordionIndex}
+          setOpenAccordionIndex={setOpenAccordionIndex}
+        />
+      ))}
+ 
+                    </div>
 
 
                     <div className="color-group">
