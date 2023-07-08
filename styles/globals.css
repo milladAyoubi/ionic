@@ -763,9 +763,10 @@ span.text-red {
     transition: .3s ease-in-out;
 }
 
-.image-container img {
-    box-shadow: rgba(68, 68, 68, 0.2) 0px 7px 15px 0px;
-    border-radius: 25px;
+.image-container img {}
+
+.image-container {
+    margin: auto 0;
 }
 
 .product-page-price {
@@ -776,7 +777,6 @@ span.text-red {
 .product-details-text {
     border-left: 2px solid #eaeaea;
     padding-left: 5rem;
-    height: 500px;
     text-align: left;
 }
 
@@ -972,7 +972,7 @@ span.text-red {
 
 .maylike-products-wrapper h2 {
     text-align: center;
-    margin-top: 280px;
+    margin-top: 2rem;
     color: #202020;
     font-size: 28px;
 }
