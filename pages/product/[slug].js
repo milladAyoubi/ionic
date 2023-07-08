@@ -6,6 +6,8 @@ import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext'
 import ColorSelector from '@/components/ColorSelector';
 import SizeSelector from '@/components/SizeSelector';
+import Favourite from '@/components/Favourite';
+import SizeGuide from '@/components/SizeGuide';
 
 import Accordion from '@/components/Accordion';
 
@@ -52,8 +54,10 @@ const ProductDetails = ({product, products}) => {
 
     
     
-    
-          <h1>{name}</h1>
+                <div className='product-title'>
+                <h1>{name}</h1>
+                <Favourite />
+                </div>
                     <div className="reviews-section">
                     <AiFillStar className="star-review"/>
                     <AiFillStar className="star-review"/>
@@ -95,6 +99,7 @@ const ProductDetails = ({product, products}) => {
                         <div>
                         <SizeSelector sizes={tshirtSizes} />
                         </div>
+                        <SizeGuide/>
                     </div>
 
                     <div className="color-group">

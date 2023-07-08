@@ -272,6 +272,15 @@ span.text-red {
     color: #324d67;
 }
 
+.product-title {
+    display: flex;
+    gap: 2rem;
+}
+
+.favourite-icon {
+    margin: auto 0;
+}
+
 .product-card p {
     color: #202020;
 }
@@ -1285,7 +1294,7 @@ span.text-red {
 
 .accordion-header {
     background-color: #ffffff;
-    padding: 18px 10px;
+    padding: 18px 0;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -1317,13 +1326,13 @@ span.text-red {
 }
 
 .accordion-content {
-    padding: 10px;
+    padding: 10px 0;
     width: 800px;
 }
 
 .accordion-title {
     font-weight: 700;
-    padding: 0 10px;
+    padding: 0 0;
     margin-bottom: 0.5rem;
 }
 
@@ -1367,6 +1376,19 @@ span.text-red {
 
 .size-options {
     display: flex;
+}
+
+.size-guide {
+    margin-top: -0.8rem;
+}
+
+.size-button {
+    border: none;
+    font-weight: 600;
+    background: none;
+    border-bottom: 2px solid black;
+    padding-bottom: -1px;
+    cursor: pointer;
 }
 
 .size-option {
