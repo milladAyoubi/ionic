@@ -5,6 +5,7 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-
 import { Product } from '../../components'; 
 import { useStateContext } from '../../context/StateContext'
 import ColorSelector from '@/components/ColorSelector';
+import SizeSelector from '@/components/SizeSelector';
 
 import Accordion from '@/components/Accordion';
 
@@ -17,6 +18,9 @@ const ProductDetails = ({product, products}) => {
         { hex: '#EB8860', name: 'Vera Orange'},
         { hex:'#303030', name: 'Obsidian'},
     ];
+
+    const tshirtSizes = ['S', 'M', 'L', 'XL'];
+
 
     const toggleAccordion = () => {
       setIsOpen(!isOpen);
@@ -84,17 +88,25 @@ const ProductDetails = ({product, products}) => {
  
                     </div>
 
+            <div className={`${product.name === "KRONOS PEACEKEEPER" || product.name === "SILVER PLATED RING"  ? 'hide-product' : 'show-group'}`}>
+
+
+                    <div className='size-group'>
+                        <div>
+                        <SizeSelector sizes={tshirtSizes} />
+                        </div>
+                    </div>
 
                     <div className="color-group">
 
                     <div>
-                    <div>
                       
                      <ColorSelector colors={Colors} />
                      </div>
+            
                     </div>
-                       
-                    </div>
+
+            </div>
 
                     <div className="quantity">
                         <h4>Quantity</h4>

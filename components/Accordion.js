@@ -13,7 +13,7 @@ const Accordion = ({ title, contentTitle, content, index, openAccordionIndex, se
         className={`accordion-header ${isOpen ? 'selected' : ''}`}
         onClick={toggleAccordion}
       >
-        <h3  className={`${isOpen ? 'selected-title ' : ''}`}>{title}</h3>
+        <h4  className={`${isOpen ? 'selected-title ' : ''}`}>{title}</h4>
         <span className={`accordion-icon ${isOpen ? 'open' : ''}`}></span>
       </div>
       {isOpen && <div className="accordion-title">{contentTitle}</div>}

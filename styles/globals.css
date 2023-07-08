@@ -767,19 +767,11 @@ span.text-red {
 .product-details-text {
     border-left: 2px solid #eaeaea;
     padding-left: 5rem;
-    position: relative;
-    top: 3rem;
     height: 500px;
     text-align: left;
 }
 
-.color-group {
-    margin-top: 3rem;
-    right: 0.1rem;
-    display: flex;
-    justify-content: flex-start;
-    gap: 1.6rem;
-}
+.color-group {}
 
 .color-caramel {
     width: 30px;
@@ -894,7 +886,7 @@ span.text-red {
 }
 
 .quantity {
-    margin-top: 3rem;
+    margin-top: 2rem !important;
     display: flex;
     gap: 20px;
     margin-top: 10px;
@@ -903,7 +895,7 @@ span.text-red {
 
 .buttons {
     display: flex;
-    margin-top: 2rem;
+    margin-top: 1rem;
     gap: 20px;
 }
 
@@ -971,7 +963,7 @@ span.text-red {
 
 .maylike-products-wrapper h2 {
     text-align: center;
-    margin-top: 350px;
+    margin-top: 280px;
     color: #202020;
     font-size: 28px;
 }
@@ -980,7 +972,6 @@ span.text-red {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
 }
 
 .max-qty {
@@ -1340,10 +1331,6 @@ span.text-red {
     margin-top: 1rem;
 }
 
-.color-selector {
-    margin-bottom: 20px;
-}
-
 .color-options {
     display: flex;
 }
@@ -1370,4 +1357,41 @@ span.text-red {
 .color-title {
     font-weight: 800;
     margin-bottom: 1rem;
+}
+
+.size-group {}
+
+.size-selector {
+    margin-bottom: 20px;
+}
+
+.size-options {
+    display: flex;
+}
+
+.size-option {
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.size-option.selected {
+    background-color: #000;
+    color: #fff;
+}
+
+.selected-size {
+    font-weight: bold;
+}
+
+.hide-product {
+    display: none;
+}
+
+.show-group {
+    margin-top: 2rem;
+    display: flex;
+    gap: 3rem;
 }

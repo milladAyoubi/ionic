@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const ColorSelector = ({ colors }) => {
-  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(colors[0]);
 
   const handleColorChange = (color) => {
     setSelectedColor(color);
@@ -27,7 +27,7 @@ const ColorSelector = ({ colors }) => {
         <p className='color-name'>
          {selectedColor.name}
         </p>
-      )}
+      ) }
     </div>
   );
 };
