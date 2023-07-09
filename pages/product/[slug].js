@@ -39,7 +39,7 @@ const ProductDetails = ({product, products}) => {
     console.log(product)
     const {image, name, details, price } = product;
     const [index, setIndex] = useState(0);
-    const { decQty, incQty, qty} = useStateContext();
+    const { decQty, incQty, qty, onAdd} = useStateContext();
   return (
     <div className='product-page'>
         <div className="product-detail-container">
@@ -116,17 +116,17 @@ const ProductDetails = ({product, products}) => {
                     <div className="quantity">
                         <h4>Quantity</h4>
                         <p className="quantity-desc">
-                            <span className="minus" onClick="">{decQty}<AiOutlineMinus/></span>
+                            <span className="minus" onClick={decQty}><AiOutlineMinus/></span>
                             <span className="num" onClick="">{qty}</span>
-                            <span className="plus" onClick=""><AiOutlinePlus/>{incQty}</span>
+                            <span className="plus" onClick={incQty}><AiOutlinePlus/></span>
 
                         </p>
                     </div>
 
                     <div className="buttons">
-                    <button type="button" className="buy-now" onClick="">Purchase Now</button>
+                    <button type="button" className="buy-now" onClick={() => onAdd(product,qty)}>Purchase Now</button>
 
-                    <button type="button" className="add-to-cart" onClick="">Add To Cart</button>
+                    <button type="button" className="add-to-cart" onClick={() => onAdd(product,qty)}>Add To Cart</button>
                     </div>
                  </div> 
         </div>
