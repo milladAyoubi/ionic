@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
 import logo from '../styles/images/promo.png';
 
+import {Cart} from './'
 
 
 const Navbar = () => {
@@ -13,8 +14,8 @@ const Navbar = () => {
     <div className="navbar-container ">
 
                   <div className="logo logo-mobile">
-                        <p className="logo-inner"></p>
-                       
+                   <p className="logo-inner"></p>
+
                   </div>
       
 
@@ -39,9 +40,9 @@ const Navbar = () => {
                         </li>
 
                         <li className="nav_item">
-                            <a href="#skills" className="nav_link">
+                        <Link href={'/product/about'}> <a href="#skills" className="nav_link">
                            ABOUT US
-                        </a>
+                        </a> </Link>
                         </li>
                         <span className="nav-seperator"> </span>
                    <div className='shoping-desktop'>
@@ -60,6 +61,7 @@ const Navbar = () => {
       </button>
      </div>
 
+    <Cart/>
 
     </div>
   )
