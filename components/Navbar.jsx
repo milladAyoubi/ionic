@@ -40,9 +40,9 @@ const Navbar = () => {
                         </li>
 
                         <li className="nav_item">
-                        <Link href={'/product/about'}> <a href="#skills" className="nav_link">
+                        <a href="#skills" className="nav_link">
                            ABOUT US
-                        </a> </Link>
+                        </a> 
                         </li>
                         <span className="nav-seperator"> </span>
                    <div className='shoping-desktop'>
