@@ -4,11 +4,11 @@ import { AiOutlineShopping } from 'react-icons/ai'
 import logo from '../styles/images/promo.png';
 
 import {Cart} from './'
-
+import { useStateContext } from '../context/StateContext';
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
-
+  const {showCart, setShowCart, totalQuantities } = useStateContext();
  
   return (
     <div className="navbar-container ">
@@ -40,28 +40,23 @@ const Navbar = () => {
                         </li>
 
                         <li className="nav_item">
-                        <Link href={'/product/about'}> <a href="#skills" className="nav_link">
+                        <Link href={'/product/about'}></Link> <a href="#skills" className="nav_link">
                            ABOUT US
-                        </a> </Link>
+                        </a> 
                         </li>
                         <span className="nav-seperator"> </span>
                    <div className='shoping-desktop'>
-                        <button type="button" className="cart-icon" >
+
+      <button type="button" className="cart-icon" onClick={()=> setShowCart(true)} >
         <AiOutlineShopping />
-      <span className="cart-item-qty">1</span>
+      <span className="cart-item-qty">{totalQuantities}</span>
       </button>
       </div>
 
                     </ul>
      
-     <div className='shopping-mobile'>
-     <button type="button" className="cart-icon" >
-        <AiOutlineShopping />
-      <span className="cart-item-qty">1</span>
-      </button>
-     </div>
-
-    <Cart/>
+  
+    {showCart && <Cart/>}
 
     </div>
   )
