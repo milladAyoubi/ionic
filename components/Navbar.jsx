@@ -40,9 +40,9 @@ const Navbar = () => {
                         </li>
 
                         <li className="nav_item">
-                        <Link href={'/product/about'}></Link> <a href="#skills" className="nav_link">
+                        <Link href={'/product/about'}> <a href="#skills" className="nav_link">
                            ABOUT US
-                        </a> 
+                        </a> </Link>
                         </li>
                         <span className="nav-seperator"> </span>
                    <div className='shoping-desktop'>
@@ -55,7 +55,13 @@ const Navbar = () => {
 
                     </ul>
      
-  
+     <div className='shopping-mobile'>
+     <button type="button" className="cart-icon" onClick={()=> setShowCart(true)}>
+        <AiOutlineShopping />
+      <span className="cart-item-qty">{totalQuantities}</span>
+      </button>
+     </div>
+
     {showCart && <Cart/>}
 
     </div>
