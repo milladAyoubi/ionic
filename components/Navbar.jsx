@@ -6,7 +6,7 @@ import logo from '../styles/images/promo.png';
 import {Cart} from './'
 import { useStateContext } from '../context/StateContext';
 
-const Navbar = () => {
+const Navbar = ({setNavMobile}) => {
   const [navbar, setNavbar] = useState(false);
   const {showCart, setShowCart, totalQuantities } = useStateContext();
  
@@ -51,6 +51,9 @@ const Navbar = () => {
         <AiOutlineShopping />
       <span className="cart-item-qty">{totalQuantities}</span>
       </button>
+      </div>
+
+      <div onClick={()=> setNavMobile(true)} className='lg:hidden cursor-pointer'>
       </div>
 
                     </ul>
