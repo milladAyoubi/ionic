@@ -106,6 +106,9 @@ export const StateContext = ({
                 incQty,
                 decQty,
                 onAdd,
+                setCartItems,
+                setTotalPrice,
+                setTotalQuantities
             }
         }> { children } 
         
