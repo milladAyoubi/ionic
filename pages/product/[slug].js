@@ -46,7 +46,7 @@ const ProductDetails = ({product, products}) => {
             
                 
                 <div className="image-container">
-                <img src={urlFor(image && image[1])} width={'600px'}  className=""
+                <img src={urlFor(image && image[1])} width={'100%'}  className=""
                  />
                 </div>
 

@@ -86,11 +86,10 @@ span.text-red {
     background: transparent;
     justify-content: flex-start;
     gap: 2rem;
-    position: relative;
+    position: absolute;
     row-gap: 5rem;
-    margin-top: 2rem;
-    padding: 0rem 5rem;
-    top: 1rem;
+    padding: 0rem 4rem;
+    top: 3rem;
     z-index: 3;
 }
 
@@ -281,6 +280,10 @@ span.text-red {
     gap: 2rem;
 }
 
+.product-title h1 {
+    font-size: 22rem;
+}
+
 .favourite-icon {
     margin: auto 0;
 }
@@ -373,12 +376,11 @@ ction */
 
 .hero-section-container {
     position: relative;
-    bottom: 100px;
     background-image: url('./images/Ionic_banner.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
+    height: 800px;
 }
 
 .hero-section-container .new-products {
@@ -782,7 +784,6 @@ ction */
 }
 
 .product-details-text {
-    border-left: 2px solid #eaeaea;
     padding-left: 5rem;
     text-align: left;
 }
@@ -823,7 +824,6 @@ ction */
 
 .reviews-section {
     display: flex;
-    margin-bottom: 0.5rem;
 }
 
 .star-review {
@@ -839,9 +839,12 @@ ction */
     bottom: 4px;
 }
 
+.product-title {}
+
 .product-details-text h1 {
-    font-size: 44px;
-    font-weight: 500;
+    margin: auto 0;
+    font-size: 36px;
+    font-weight: 600;
 }
 
 .product-detail-image:hover {
