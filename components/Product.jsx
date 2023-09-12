@@ -8,7 +8,7 @@ slug, price } }) => {
 
 
   return (
-    <div>
+    <section>
       <Link href={`/product/${slug.current}`}>  
       <div className="product-card">
         <img src={urlFor(image && image[0])} width={300} height={400} className=""
@@ -18,7 +18,7 @@ slug, price } }) => {
       </div>
       </Link>
    
-    </div>
+    </section>
   )
 }
 

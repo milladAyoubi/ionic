@@ -32,7 +32,7 @@ const Home = ({ products, bannerData, collections }) => {
     <Promotion/>
 
 
-    <div className="section-container">
+    <div className="section-container" id="product">
             <div className="products-heading">
                 <h2>Our Collection</h2>
                 <p>From here you can view all of out available products</p>

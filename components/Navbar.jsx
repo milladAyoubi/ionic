@@ -1,7 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
 import { AiOutlineShopping } from 'react-icons/ai'
 import logo from '../styles/images/promo.png';
+
+
+
+
+
 
 import {Cart} from './'
 import { useStateContext } from '../context/StateContext';
@@ -28,20 +33,15 @@ const Navbar = ({setNavMobile}) => {
                         
 
                         <li className="nav_item">
-                           <Link href='collection'><p href="#categories" className="nav_link"></p></Link>
-                            CATAGORIES
+                           <Link href="/" >HOME</Link>
                         </li>
 
                         <li className="nav_item">
-                            <a href="#collection" className="nav_link">
-                            COLLECTION
-                        </a>
+                           <Link href="#product">COLLECTION</Link>
                         </li>
 
                         <li className="nav_item">
-                        <a href="#about" className="nav_link">
-                           ABOUT US
-                        </a> 
+                        <Link href="#about" >ABOUT US</Link>
                         </li>
                         <span className="nav-seperator"> </span>
                    <div className='shoping-desktop'>
