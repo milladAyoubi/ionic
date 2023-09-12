@@ -118,6 +118,7 @@ span.text-red {
         gap: 1.4rem !important;
     }
     .shopping-mobile {
+        padding-top: 0.3rem;
         display: inline;
         position: fixed;
         bottom: 4rem;
@@ -213,12 +214,13 @@ span.text-red {
 .cart-item-qty {
     position: absolute;
     right: -10px;
-    top: -8px;
+    top: -10px;
     font-size: 16px;
     color: #eee;
     background-color: #f02d34;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    padding-top: 0.15rem;
+    height: 26px;
     border-radius: 50%;
     text-align: center;
     font-weight: 600;
@@ -1216,10 +1218,11 @@ ction */
     }
     .accordion-content {
         padding: 10px 0;
-        width: 600px;
+        width: 100%;
     }
     .image-container img {
-        width: 100%
+        width: 100%;
+        height: auto;
     }
     .hero-section-container {
         height: 60vh;
