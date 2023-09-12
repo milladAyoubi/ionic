@@ -1,4 +1,4 @@
-ehtml,
+html,
 body,
 * {
     padding: 0;
@@ -10,6 +10,10 @@ body,
 
 ::-webkit-scrollbar {
     width: 0px;
+}
+
+.scroll {
+    scroll-behavior: smooth;
 }
 
 a {

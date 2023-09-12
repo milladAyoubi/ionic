@@ -1,8 +1,10 @@
-import React, {useState, useEffect} from 'react'
-import Link from 'next/link'
+'use client'
+import React,{useContext, useEffect, useState} from 'react'
+import {Link} from 'react-scroll'
 import { AiOutlineShopping } from 'react-icons/ai'
 import logo from '../styles/images/promo.png';
 
+import {useMediaQuery} from 'react-responsive'
 
 
 
@@ -14,6 +16,8 @@ import { useStateContext } from '../context/StateContext';
 const Navbar = ({setNavMobile}) => {
   const [navbar, setNavbar] = useState(false);
   const {showCart, setShowCart, totalQuantities } = useStateContext();
+
+
  
   return (
     <div className="navbar-container ">
@@ -27,21 +31,22 @@ const Navbar = ({setNavMobile}) => {
       <ul className="nav-menu grid">
                        
                         <div className="logo logo-desktop">
-                        <Link href="/"><p className="logo-inner"></p></Link>
+                        <a href="/"><p className="logo-inner"></p></a>
                        
                         </div>
                         
 
                         <li className="nav_item">
-                           <Link href="/" >HOME</Link>
+                           <a href="/">HOME</a>
                         </li>
 
                         <li className="nav_item">
-                           <Link href="#product">COLLECTION</Link>
+                           <Link activeClass="active" to="product"  duration={500} spy={true} smooth={true} >COLLECTION</Link>
                         </li>
 
                         <li className="nav_item">
-                        <Link href="#about" >ABOUT US</Link>
+                        <a href="/">ABOUT US</a>
+                       
                         </li>
                         <span className="nav-seperator"> </span>
                    <div className='shoping-desktop'>

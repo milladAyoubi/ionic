@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import {Link} from 'react-scroll'
 
 import { urlFor } from '../lib/client'
 import banner from '@/sanity_ionic/schemas/banner'
@@ -14,7 +14,7 @@ const HeroSection = ({ heroBanner }) => {
             <p className="new-products">{heroBanner.smallText}</p>
             <h3>UNIQUE AND <br></br>ELEGANT STYLES</h3>
             <p className="hero-section-desc">All products are custom made and designed to ensure the best possible <br></br> quality while maintaining our goal towards 100 % renewable efforts.</p>
-           <Link href="#product"> <button className="hero-section-button">{heroBanner.buttonText}</button></Link>
+           <Link activeClass="active" to="product"  duration={500} spy={true} smooth={true} > <button className="hero-section-button">{heroBanner.buttonText}</button></Link>
            
           </div>
 
