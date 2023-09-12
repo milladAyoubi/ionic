@@ -28,19 +28,18 @@ const Navbar = ({setNavMobile}) => {
                         
 
                         <li className="nav_item">
-                            <a href="#collection" className="nav_link">
+                           <Link href='collection'><p href="#categories" className="nav_link"></p></Link>
                             CATAGORIES
-                        </a>
                         </li>
 
                         <li className="nav_item">
-                            <a href="#resume" className="nav_link">
+                            <a href="#collection" className="nav_link">
                             COLLECTION
                         </a>
                         </li>
 
                         <li className="nav_item">
-                        <a href="#skills" className="nav_link">
+                        <a href="#about" className="nav_link">
                            ABOUT US
                         </a> 
                         </li>
