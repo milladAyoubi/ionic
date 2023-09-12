@@ -756,7 +756,7 @@ ction */
 .product-detail-container {
     display: flex;
     position: relative;
-    top: 4rem;
+    top: 6rem;
     justify-content: start;
     gap: 5%;
     margin: 100px;
@@ -1216,7 +1216,7 @@ ction */
     }
     .accordion-content {
         padding: 10px 0;
-        width: 100%;
+        width: 600px;
     }
     .image-container img {
         width: 100%

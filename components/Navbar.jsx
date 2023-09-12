@@ -14,7 +14,7 @@ const Navbar = ({setNavMobile}) => {
     <div className="navbar-container ">
 
                   <div className="logo logo-mobile">
-                   <p className="logo-inner"></p>
+                  <p className="logo-inner"></p>
 
                   </div>
       
@@ -22,7 +22,7 @@ const Navbar = ({setNavMobile}) => {
       <ul className="nav-menu grid">
                        
                         <div className="logo logo-desktop">
-                        <p className="logo-inner"></p>
+                        <Link href="/"><p className="logo-inner"></p></Link>
                        
                         </div>
                         
