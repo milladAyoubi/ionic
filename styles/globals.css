@@ -1262,6 +1262,7 @@ ction */
     .product-details-text {
         border-top: 2px solid transparent;
         padding-left: 0;
+        width: 100%;
         padding-top: 2rem;
         border-left: none;
     }
