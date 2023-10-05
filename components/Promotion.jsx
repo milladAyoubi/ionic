@@ -11,7 +11,6 @@ const Promotion = () => {
             <div ></div>
                 <div className="promo-content">
                     <h3>An elegant coat for a <br></br>modern man</h3>
-                    <p>Stride through this season in style</p>
                     <button>Shop Now</button>
                 </div>
 
