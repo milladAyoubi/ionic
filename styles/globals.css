@@ -101,6 +101,10 @@ span.text-red {
     z-index: 3;
 }
 
+.nav_item {
+    cursor: pointer;
+}
+
 .shopping-mobile {
     display: none;
 }
@@ -160,6 +164,7 @@ span.text-red {
 }
 
 .about-us-container-layout {
+    overflow: hidden;
     max-width: 1200px;
     align-items: center;
     display: flex;
@@ -421,6 +426,7 @@ span.text-red {
 }
 
 .about-container {
+    overflow: none;
     box-shadow: rgba(52, 52, 54, 0.1) 0px 7px 20px 0px;
     margin: 0 auto;
     max-width: 1200px;
@@ -466,21 +472,52 @@ span.text-red {
     margin: 0.2rem 0;
 }
 
-.promo-content button {
+.btn41-43 {
+    margin: 1rem 0;
+    padding: 0.6rem 2.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    background: transparent;
+    outline: none !important;
     cursor: pointer;
-    margin: 1.2rem 0;
-    font-weight: 700;
-    border: none;
-    background: #202020;
-    padding: 0.5rem 3rem;
-    color: white;
-    transition: 0.2s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
 }
 
-.promo-content button:hover {
+.btn-41 {
+    border: 2px solid rgb(255, 255, 255);
+    z-index: 1;
     color: white;
-    background: #303030;
-    transition: 0.2s ease;
+}
+
+.btn-41:after {
+    color: #202020;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+.btn-41:hover {
+    color: #202020;
+}
+
+.btn-41:hover:after {
+    color: #202020;
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+.btn-41:active {
+    top: 2px;
 }
 
 
@@ -516,21 +553,37 @@ ction */
 }
 
 .hero-section-container button {
-    background: transparent;
-    border: 4px solid #202020;
-    color: #202020;
-    padding: 0.8rem 2rem;
-    font-size: 18px;
+    margin: none !important;
+    padding: 0.8rem 2.5rem;
     font-weight: 800;
+    font-size: 1rem;
+    background: transparent;
+    outline: none !important;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    border: 4px solid #202020;
+    z-index: 1;
+    color: #202020;
 }
 
 .hero-section-container button:hover {
-    background: #202020;
     color: white;
-    transition: 0.2s ease;
-    box-shadow: rgba(52, 52, 54, 0.2) 0px 7px 10px 0px;
+}
+
+.hero-section-container button:after {
+    color: white;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    background: #202020;
+    transition: all 0.3s ease;
 }
 
 .hero-section-desc {
