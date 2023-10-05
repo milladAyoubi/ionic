@@ -45,7 +45,7 @@ const Navbar = ({setNavMobile}) => {
                         </li>
 
                         <li className="nav_item">
-                        <a href="/">ABOUT US</a>
+                        <Link activeClass="active" to="about" duration={500} spy={true} smooth={true} >ABOUT US</Link>
                        
                         </li>
                         <span className="nav-seperator"> </span>

@@ -1,7 +1,9 @@
 import React from 'react'
 import { client } from '../lib/client';
-import { Product, Promotion, FooterBanner, HeroSection, Collection} from '../components'
+import { Product, Promotion, FooterBanner, HeroSection, Collection, } from '../components'
+import About from '../components/About'
 import banner from '@/sanity_ionic/schemas/banner';
+
 
 
 
@@ -43,7 +45,13 @@ const Home = ({ products, bannerData, collections }) => {
                 {product._id} product={product} />)}
             </div>
      </div>
+
+     <div className="section-container" id="about">
+            
+            
+     </div>
            
+     <About/>
 
 
 
