@@ -41,11 +41,11 @@ const Navbar = ({setNavMobile}) => {
                         </li>
 
                         <li className="nav_item">
-                           <Link activeClass="active" to="product" duration={500} spy={true} smooth={true} >COLLECTION</Link>
+                           <Link activeClass="active" className='link' to="product" duration={500} spy={true} smooth={true} >COLLECTION</Link>
                         </li>
 
                         <li className="nav_item">
-                        <Link activeClass="active" to="about" duration={500} spy={true} smooth={true} >ABOUT US</Link>
+                        <Link activeClass="active" className='link' to="about" duration={500} spy={true} smooth={true} >ABOUT US</Link>
                        
                         </li>
                         <span className="nav-seperator"> </span>

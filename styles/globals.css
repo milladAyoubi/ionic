@@ -21,6 +21,10 @@ a {
     text-decoration: none;
 }
 
+.link {
+    cursor: hover;
+}
+
 .main-container {
     margin: auto;
     width: 100%;
@@ -103,6 +107,71 @@ span.text-red {
 
 .logo-mobile {
     display: none;
+}
+
+.diversity-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 550px;
+    background-image: url('./images/Diversity_Image.png');
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    display: flex;
+    border-radius: 0;
+    background: #202020;
+    background: url('./images/Diversity_Image.png');
+}
+
+.diversity-image-01 {
+    display: flex;
+    position: relative;
+    left: 9rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 550px;
+    background-image: url('./images/Quality_Image.png');
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    display: flex;
+    border-radius: 0;
+    background: #202020;
+    background: url('./images/Quality_Image.png');
+}
+
+.diversity-image-02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 550px;
+    background-image: url('./images/Sustainability_Image.png');
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    display: flex;
+    border-radius: 0;
+    background: #202020;
+    background: url('./images/Sustainability_Image.png');
+}
+
+.about-us-container-layout {
+    max-width: 1200px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.about-us-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
 }
 
 @media screen and (max-width: 992px) {
@@ -248,6 +317,14 @@ span.text-red {
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 20px;
     max-width: 900px;
+}
+
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .collection-card {
