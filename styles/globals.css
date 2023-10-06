@@ -1501,7 +1501,6 @@ ction */
     .about-content {
         margin: auto 0;
     }
-    .diversity-image {}
     .about-us-container-layout {
         text-align: center;
         display: flex;
@@ -1511,21 +1510,6 @@ ction */
     }
     .quality-layout {
         flex-direction: column-reverse;
-    }
-    .promo-content button {
-        cursor: pointer;
-        margin: 1.2rem 0;
-        color: #ffffff;
-        font-weight: 700;
-        border: 2px solid #202020;
-        background: #202020;
-        padding: 0.35rem 2.8rem;
-        transition: 0.2s ease;
-    }
-    .promo-content button:hover {
-        color: white;
-        background: #202020;
-        transition: 0.2s ease;
     }
     .hero-banner-image {
         width: 77%;
