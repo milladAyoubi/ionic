@@ -71,7 +71,7 @@ const Home = ({ products, bannerData, collections }) => {
                         <p>IONIC is committed to inclusivity and diversity. The store is also dedicated to promoting diversity and inclusivity in its advertising and marketing campaigns, featuring models and influencers of different ages, sizes, and ethnicities. The store also features a diverse range of styles and designs, catering to different preferences and cultural backgrounds.</p>
                     </div>
                 </div>
-                <div className='about-us-container-layout'>
+                <div className='about-us-container-layout quality-layout'>
 
                     
 
