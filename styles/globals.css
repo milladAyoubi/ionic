@@ -1646,3 +1646,13 @@ ction */
         margin: auto;
     }
 }
+
+@media screen and (max-width: 512px) {
+    .hero-section-container {
+        height: 94vh;
+    }
+    .product-card img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
