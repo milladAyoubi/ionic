@@ -13,7 +13,9 @@ import Accordion from '@/components/Accordion';
 
 const ProductDetails = ({product, products}) => {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen1, setIsOpen1] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
+
     const Colors = [ 
         { hex: '#AE815F', name: 'Caramel Twist' },
         { hex:'#C5C5C7', name: 'Silver Ice' }, 
@@ -24,22 +26,34 @@ const ProductDetails = ({product, products}) => {
     const tshirtSizes = ['S', 'M', 'L', 'XL'];
 
 
-    const toggleAccordion = () => {
-      setIsOpen(!isOpen);
+    const toggleAccordion1 = () => {
+      setIsOpen1(!isOpen1);
+      
     };
+
+    const toggleAccordion2 = () => {
+        setIsOpen2(!isOpen2);
+        
+      };
+    
   
     const [openAccordionIndex, setOpenAccordionIndex] = useState(null);
-
+/*
   const accordions = [
     { title: 'Materials', contentTitle: 'Composition', content: 'Cotton is a soft and versatile natural fibre harvested from the cotton plant. Polyester is a synthetic fibre made from crude oil (a fossil resource).' },
     { title: 'Care Guide', contentTitle: 'Care instructions',content: 'Only non-chlorine bleach when needed. Medium iron. Machine wash cold' },
   
   ];
+  
+*/
 
     console.log(product)
-    const {image, name, details, price } = product;
+    const {image, name, details, price, materials, careguide } = product;
     const [index, setIndex] = useState(0);
     const { decQty, incQty, qty, onAdd, setShowCart} = useStateContext();
+
+   
+
   return (
     <div className='product-page'>
         <div className="product-detail-container">
@@ -69,26 +83,42 @@ const ProductDetails = ({product, products}) => {
                     <p className="product-page-price">${price}</p>
                     <p className="product-details">{details}</p>
                     <br></br>
+
+                    <div className={`${product.name !== "KRONOS PEACEKEEPER"  ? 'hide-product ' : 'show-group '}`}>
+                    <div>
                     <p>Case Size: 46 mm</p>
                     <p>Case Water Resistance: 10 ATM</p>
                     <p>Case Material: Admantium</p>
+                    </div>
+                    </div>
 
 
                     <div className='accordion-section'>
                    
     
-      {accordions.map((accordion, index) => (
-        <Accordion
-          key={index}
-          title={accordion.title}
-          contentTitle={accordion.contentTitle}
+      <div className="accordion">
+      <div
+        className={`accordion-header ${isOpen1 ? 'selected' : ''}`}
+        onClick={toggleAccordion1}>
+        <h4  className={`${isOpen1 ? 'selected-title ' : ''}`}>Materials</h4>
+        <span className={`accordion-icon ${isOpen1 ? 'open' : ''}`}></span>
+      </div>
+      {isOpen1 && <div className="accordion-title">Composition</div>}
+      {isOpen1 && <div className="accordion-content">{materials}</div>}
+    
+    </div>
 
-          content={accordion.content}
-          index={index}
-          openAccordionIndex={openAccordionIndex}
-          setOpenAccordionIndex={setOpenAccordionIndex}
-        />
-      ))}
+    <div className="accordion">
+      <div
+        className={`accordion-header ${isOpen2 ? 'selected' : ''}`}
+        onClick={toggleAccordion2}>
+        <h4  className={`${isOpen2 ? 'selected-title ' : ''}`}>Care Guide</h4>
+        <span className={`accordion-icon ${isOpen2 ? 'open' : ''}`}></span>
+      </div>
+      {isOpen2 && <div className="accordion-title">Instructions</div>}
+      {isOpen2 && <div className="accordion-content">{careguide}</div>}
+    
+    </div>
  
                     </div>
 

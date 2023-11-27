@@ -966,6 +966,10 @@ ction */
     text-align: left;
 }
 
+.product-details {
+    width: 500px;
+}
+
 .color-group {}
 
 .color-caramel {
@@ -1020,8 +1024,8 @@ ction */
 .product-title {}
 
 .product-details-text h1 {
-    margin: auto 0;
-    font-size: 36px;
+    margin: 1rem 0;
+    font-size: 26px;
     font-weight: 600;
 }
 
@@ -1280,17 +1284,13 @@ ction */
 
 .accordion-content {
     padding: 10px 0;
-    width: 100%;
+    width: 500px;
 }
 
 .accordion-title {
     font-weight: 700;
     padding: 0 0;
     margin-bottom: 0.5rem;
-}
-
-.accordion-section {
-    margin-top: 1rem;
 }
 
 .color-options {
@@ -1641,6 +1641,9 @@ ction */
 }
 
 @media screen and (max-width: 512px) {
+    .product-details {
+        width: 100%;
+    }
     .nav_item a {
         font-size: 10px;
     }

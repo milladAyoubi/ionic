@@ -40,6 +40,18 @@ export default {
             name: 'details',
             title: 'Details',
             type: 'string',
+        },
+
+        {
+            name: 'materials',
+            title: 'Materials',
+            type: 'string',
+        },
+
+        {
+            name: 'careguide',
+            title: 'CareGuide',
+            type: 'string',
         }
     ]
 }
