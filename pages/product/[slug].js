@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import { client, urlFor } from '../../lib/client';
 import reviews from '../../styles/images/reviews.png';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
@@ -52,7 +52,16 @@ const ProductDetails = ({product, products}) => {
     const [index, setIndex] = useState(0);
     const { decQty, incQty, qty, onAdd, setShowCart} = useStateContext();
 
-   
+    const resetToDefaults = () => {
+        setIsOpen1(false);
+        setIsOpen2(false);
+      };
+    
+      useEffect(() => {
+        // Reset values to default on page reload
+        resetToDefaults();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [name]);
 
   return (
     <div className='product-page'>
