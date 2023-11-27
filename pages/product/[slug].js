@@ -143,7 +143,7 @@ const ProductDetails = ({product, products}) => {
 
                     <div className="color-group">
 
-                    <div>
+                    <div className={`${product.name === "HERMES ULTRA MK IV" || product.name === "SILVER PLATED RING"  ? 'hide-product' : 'show-group'}`}>
                       
                      <ColorSelector colors={Colors} />
                      </div>
